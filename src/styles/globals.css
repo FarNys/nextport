@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Iran_Yekan";
+  /* src: url("/Assets/Fonts/iranyekanwebbold.woff2"); */
+  src: url("/Fonts/iranyekanwebregular.woff2") format("woff2"),
+    url("/Fonts/iranyekanwebbold.woff2") format("woff2");
+
+  /* src: url("/Assets/Fonts/IRANSansWeb_fa.woff"); */
+}
+* {
+  font-family: "Iran_Yekan";
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,8 +27,20 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+.gradiant_bg {
+  /* background: -webkit-linear-gradient(#eee, #333); */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tooltiptext {
+  visibility: hidden;
+}
 
-body {
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +48,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
