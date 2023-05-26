@@ -1,5 +1,6 @@
-import Layout from "@/components/Layout";
 import React from "react";
+import Layout from "@/components/Layout";
+
 const cards = [1, 2];
 const items = [1, 2, 3, 4, 5, 6];
 const About = () => {
@@ -34,7 +35,7 @@ const About = () => {
   );
 };
 
-About.getLayout = function getLayout(page: JSX.Element) {
+About.getLayout = function getLayout(page: React.ReactNode) {
   return <Layout>{page}</Layout>;
 };
 

@@ -18,7 +18,7 @@ export default function Home() {
             فرانت اند
           </span>
           <span> </span>
-          وب دولوپری که با کتابخانه ری اکت کار می کنم .
+          وب دولوپری که با کتابخانه ری اکت کار می کنم.
         </h1>
         <div className="mt-12 flex">
           <Link href="/" className="ml-2">
