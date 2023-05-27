@@ -1,12 +1,10 @@
+import { useEffect } from "react";
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import Layout from "@/components/Layout";
 import { BsArrowLeftShort } from "react-icons/bs";
 import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+export default function Home(props: any) {
   return (
     <div className="border w-full mt-44 p-3 flex">
       <div className="flex-1">

@@ -29,15 +29,14 @@ const Gallery = (props) => {
           key={props.galleryID + "-" + index}
           target="_blank"
           rel="noreferrer"
-          className="ml-1 border border-slate-400 rounded-my overflow-hidden px-1"
+          className="ml-1 border border-slate-300 rounded-my overflow-hidden"
         >
           <Image
             src={image.url}
             alt="img"
             width={100}
             height={50}
-            style={{ objectFit: "contain" }}
-            className="px-2"
+            style={{ objectFit: "cover" }}
           />
         </a>
       ))}

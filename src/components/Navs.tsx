@@ -10,7 +10,7 @@ const Navs = () => {
           <li key={`nav-${index}`}>
             <Link
               href="/about"
-              className="mx-1 border border-transparent rounded-my px-2 py-1 text-slate-400 hover:bg-emerald-500 hover:text-white hover:border-emerald-500"
+              className="mx-1 border border-transparent rounded-my px-2 py-1 text-slate-400 hover:bg-primary-500 hover:text-white hover:border-primary-500"
             >
               {el}
             </Link>

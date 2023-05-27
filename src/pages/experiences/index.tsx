@@ -4,8 +4,10 @@ import { BiTargetLock } from "react-icons/bi";
 import { MdDashboardCustomize } from "react-icons/md";
 import { SiWebmoney } from "react-icons/si";
 import { FaCircle } from "react-icons/fa";
+import { FiLink } from "react-icons/fi";
 import Gallery from "@/components/Gallery";
 import bi_Img from "/images/bi_menu.jpg";
+import Link from "next/link";
 
 const expData = {
   title: "پروژه های شرکتی",
@@ -25,6 +27,23 @@ const expData = {
         "Rest Api",
         "Auth",
       ],
+      images: [
+        {
+          url: "/images/bi_menu.png",
+          width: 1366,
+          height: 738,
+        },
+        {
+          url: "/images/bi_sale_.png",
+          width: 1366,
+          height: 738,
+        },
+        {
+          url: "/images/bi_table.png",
+          width: 1366,
+          height: 738,
+        },
+      ],
     },
     {
       icon: <MdDashboardCustomize />,
@@ -42,6 +61,23 @@ const expData = {
         "react-datasheet-grid",
         "Rest Api",
       ],
+      images: [
+        {
+          url: "/images/bi_menu.png",
+          width: 1366,
+          height: 738,
+        },
+        {
+          url: "/images/bi_sale_.png",
+          width: 1366,
+          height: 738,
+        },
+        {
+          url: "/images/bi_table.png",
+          width: 1366,
+          height: 738,
+        },
+      ],
     },
     {
       icon: <SiWebmoney />,
@@ -50,6 +86,23 @@ const expData = {
       desc: "سایت کاوینو ساخته شده با استفاده از تکنولوژی های Nextjs, PWA و پشتیبانی سمت سرور بوسیله Strapi Headless CMS",
       tags: ["Nextjs", "Scss", "SSR-SSG", "PWA", "Strapi", "Headless CMS"],
       link: "https://kavino.netlify.com/",
+      images: [
+        {
+          url: "/images/bi_menu.png",
+          width: 1366,
+          height: 738,
+        },
+        {
+          url: "/images/bi_sale_.png",
+          width: 1366,
+          height: 738,
+        },
+        {
+          url: "/images/bi_table.png",
+          width: 1366,
+          height: 738,
+        },
+      ],
     },
   ],
 };
@@ -65,7 +118,7 @@ const Experiences = () => {
         {expData.cards.map((el, index) => (
           <div
             key={`card-${index}`}
-            className="flex-1 flex flex-col border-2 rounded-my mx-1 first:mr-0 bg-gradient-to-bl from-white to-primary-100 px-4 hover:border-primary-600"
+            className="flex-1 flex flex-col border-2 rounded-my mx-1 first:mr-0 bg-gradient-to-bl from-white to-primary-50 px-4 hover:to-primary-100"
           >
             <div className="flex justify-between my-2 items-center text-primary-700 text-lg">
               <h4>{el.title}</h4>
@@ -77,7 +130,7 @@ const Experiences = () => {
               <ul className="flex flex-wrap mb-2">
                 {el.tags.map((item, index) => (
                   <li
-                    className="rounded-my border text-sm w-max px-2 pt-1 pb-0.5 ml-1 mt-0.5 border-primary-400 bg-white text-slate-800"
+                    className="rounded-my  text-sm w-max px-2 pt-1 pb-0.5 ml-1 mt-0.5 border border-slate-300  bg-white text-slate-600"
                     key={`tech-${index}`}
                   >
                     {item}
@@ -86,22 +139,20 @@ const Experiences = () => {
               </ul>
             </div>
             <div className="my-3">
-              <h4 className="text-sm text-slate-500">تصاویر</h4>
-              <Gallery
-                galleryID="my-test-gallery"
-                images={[
-                  {
-                    url: "/images/bi_menu.png",
-                    width: 1366,
-                    height: 738,
-                  },
-                  {
-                    url: "/images/bi_sale.png",
-                    width: 1366,
-                    height: 738,
-                  },
-                ]}
-              />
+              <div className="flex text-sm text-slate-500">
+                <h4>تصاویر</h4>
+                {el.link && (
+                  <a
+                    href={el.link}
+                    className="mr-3 hover:text-primary-600 flex items-center"
+                    target="_blank"
+                  >
+                    <FiLink className="ml-1" />
+                    لینک دمو
+                  </a>
+                )}
+              </div>
+              <Gallery galleryID="my-test-gallery" images={el.images} />
             </div>
           </div>
         ))}

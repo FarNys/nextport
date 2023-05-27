@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutType) => {
         <Navs />
         <Link
           href="/"
-          className="flex items-center text-xl text-primary-600 hover:text-primary-700"
+          className="flex items-center text-xl text-primary-600 hover:text-primary-700 px-2"
         >
           <AiFillHome />
         </Link>
