@@ -6,10 +6,11 @@ import { SiWebmoney } from "react-icons/si";
 import { FaCircle } from "react-icons/fa";
 import { FiLink } from "react-icons/fi";
 import Gallery from "@/components/Gallery";
-import bi_Img from "/images/bi_menu.jpg";
 import Link from "next/link";
+import Card from "@/components/Card";
+import { SingleSectionType } from "@/types/types";
 
-const expData = {
+const expData: SingleSectionType = {
   title: "پروژه های شرکتی",
   cards: [
     {
@@ -63,17 +64,17 @@ const expData = {
       ],
       images: [
         {
-          url: "/images/bi_menu.png",
+          url: "/images/wf_access.png",
           width: 1366,
           height: 738,
         },
         {
-          url: "/images/bi_sale_.png",
+          url: "/images/wf_create.png",
           width: 1366,
           height: 738,
         },
         {
-          url: "/images/bi_table.png",
+          url: "/images/wf_sheet.png",
           width: 1366,
           height: 738,
         },
@@ -88,17 +89,17 @@ const expData = {
       link: "https://kavino.netlify.com/",
       images: [
         {
-          url: "/images/bi_menu.png",
+          url: "/images/kavino_1.png",
           width: 1366,
           height: 738,
         },
         {
-          url: "/images/bi_sale_.png",
+          url: "/images/kavino_2.png",
           width: 1366,
           height: 738,
         },
         {
-          url: "/images/bi_table.png",
+          url: "/images/kavino_3.png",
           width: 1366,
           height: 738,
         },
@@ -109,59 +110,21 @@ const expData = {
 
 const Experiences = () => {
   return (
-    <div className="border w-full p-3 mt-20 ">
+    <div className=" w-full p-3 mt-20 ">
       <h3 className="text-slate-400 flex items-center">
         <FaCircle className="ml-2 text-sm" />
         از بهمن 1400 تا اردیبهشت 1402 - مدیاژ (کاوینو)
       </h3>
       <div className="flex mt-4">
         {expData.cards.map((el, index) => (
-          <div
-            key={`card-${index}`}
-            className="flex-1 flex flex-col border-2 rounded-my mx-1 first:mr-0 bg-gradient-to-bl from-white to-primary-50 px-4 hover:to-primary-100"
-          >
-            <div className="flex justify-between my-2 items-center text-primary-700 text-lg">
-              <h4>{el.title}</h4>
-              <p>{el.icon}</p>
-            </div>
-            <p className="h-full">{el.desc}</p>
-            <div className="mt-3">
-              <h4 className="text-sm text-slate-500">{el.subTitle}</h4>
-              <ul className="flex flex-wrap mb-2">
-                {el.tags.map((item, index) => (
-                  <li
-                    className="rounded-my  text-sm w-max px-2 pt-1 pb-0.5 ml-1 mt-0.5 border border-slate-300  bg-white text-slate-600"
-                    key={`tech-${index}`}
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="my-3">
-              <div className="flex text-sm text-slate-500">
-                <h4>تصاویر</h4>
-                {el.link && (
-                  <a
-                    href={el.link}
-                    className="mr-3 hover:text-primary-600 flex items-center"
-                    target="_blank"
-                  >
-                    <FiLink className="ml-1" />
-                    لینک دمو
-                  </a>
-                )}
-              </div>
-              <Gallery galleryID="my-test-gallery" images={el.images} />
-            </div>
-          </div>
+          <Card el={el} key={`card=${index}`} />
         ))}
       </div>
     </div>
   );
 };
 
-Experiences.getLayout = function getLayout(page: React.ReactNode) {
+Experiences.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout>{page}</Layout>;
 };
 

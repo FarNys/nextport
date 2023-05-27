@@ -1,6 +1,19 @@
 import Link from "next/link";
 import React from "react";
-const items = ["About Me", "Experiences", "Projects", "Contact"];
+const items: { link: string; title: string }[] = [
+  {
+    link: "/experiences",
+    title: "تجربه",
+  },
+  {
+    link: "projects",
+    title: "پروژه ها",
+  },
+  {
+    link: "/contact",
+    title: "تماس",
+  },
+];
 
 const Navs = () => {
   return (
@@ -9,10 +22,10 @@ const Navs = () => {
         {items.map((el, index) => (
           <li key={`nav-${index}`}>
             <Link
-              href="/about"
+              href={el.link}
               className="mx-1 border border-transparent rounded-my px-2 py-1 text-slate-400 hover:bg-primary-500 hover:text-white hover:border-primary-500"
             >
-              {el}
+              {el.title}
             </Link>
           </li>
         ))}
