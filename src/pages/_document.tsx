@@ -11,6 +11,10 @@ export default class MyDocument extends Document {
         >
           <Main />
           <NextScript />
+          {/* <style>
+            @import
+            url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+          </style> */}
         </body>
       </Html>
     );

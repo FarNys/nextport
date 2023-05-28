@@ -1,9 +1,7 @@
 import Card from "@/components/Card";
 import Layout from "@/components/Layout";
-import { CardType, ProjectType } from "@/types/types";
-import { SingleSectionType } from "@/types/types";
+import { ProjectType } from "@/types/types";
 import React from "react";
-import { BiTargetLock } from "react-icons/bi";
 import { FaCircle } from "react-icons/fa";
 
 const projectsData: ProjectType = {
@@ -19,9 +17,9 @@ const projectsData: ProjectType = {
     {
       title: "کتابخانه myreact-ui-lib",
       subTitle: "تکنولوژی ها",
-      desc: "در این پروژه با استفاده از tailwind css و Typescript یک کتابخانه شخصی برای کامپوننت ها ساخته شده که شامل اکثر کامپوننت های لازم برای یک پروژه می باشد که درحال تست با Cypress می باشد.",
+      desc: "در این پروژه با استفاده از tailwind css و Typescript یک کتابخانه شخصی برای کامپوننت ها ساخته شده که شامل اکثر کامپوننت های لازم برای یک پروژه که با cypress تست شده است.(درحال توسعه)",
       tags: ["React", "Typescript", "Tailwind css", "Cypress", "Unit Test"],
-      link: "https://github.com/FarNys/ui-lib-container",
+      link: "/projects/ui",
     },
     {
       title: "Spreadsheet",
@@ -29,6 +27,7 @@ const projectsData: ProjectType = {
       desc: "این پروژه شبیه به یک spreadsheet است، با قابلیت ساخت انواع سلول مانند number, dropdown, boolean, text, date و ... . شامل انتخاب یک یا چند سلول، یک ستون، ویرایش تکی و گروهی سلول ها، resize کردن و جابجایی ستونها و بروزرسانی زنده با کمک socket io می باشد. با قابلیت copy/paste سلول ها از Googlesheet و Excel",
       tags: [
         "React",
+        "Typescript",
         "Redux toolkit",
         "React-Virtualize",
         "Socket io",
@@ -61,12 +60,12 @@ const projectsData: ProjectType = {
 
 const Projects = () => {
   return (
-    <div className=" w-full p-3 mt-20 ">
+    <div className=" w-full p-3 mt-4 md:mt-20">
       <h3 className="text-slate-400 flex items-center">
         <FaCircle className="ml-2 text-sm" />
         پروژه های شخصی
       </h3>
-      <div className="flex mt-4">
+      <div className="flex mt-4 flex-col md:flex-row">
         {projectsData.cards.map((el, index) => (
           <Card el={el} key={`card=${index}`} />
         ))}
@@ -76,7 +75,19 @@ const Projects = () => {
 };
 
 Projects.getLayout = (page: React.ReactElement) => {
-  return <Layout>{page}</Layout>;
+  return (
+    <Layout
+      props={{
+        title: "پروژه ها",
+        description:
+          "پروژه های متن باز و در حال توسعه شخصی جهت یادگیری و تمرین تکنولوژی های جدید",
+        keywords:
+          "react, nextjs, typescript, tailwindcss, materialui, scss, html, css, bootstrap, redux,react query, frontend, front end, web, web developer, frontend web developer, javascript",
+      }}
+    >
+      {page}
+    </Layout>
+  );
 };
 
 export default Projects;

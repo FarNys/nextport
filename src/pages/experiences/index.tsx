@@ -4,9 +4,7 @@ import { BiTargetLock } from "react-icons/bi";
 import { MdDashboardCustomize } from "react-icons/md";
 import { SiWebmoney } from "react-icons/si";
 import { FaCircle } from "react-icons/fa";
-import { FiLink } from "react-icons/fi";
-import Gallery from "@/components/Gallery";
-import Link from "next/link";
+
 import Card from "@/components/Card";
 import { SingleSectionType } from "@/types/types";
 
@@ -110,12 +108,12 @@ const expData: SingleSectionType = {
 
 const Experiences = () => {
   return (
-    <div className=" w-full p-3 mt-20 ">
+    <div className=" w-full p-3 mt-4 md:mt-20">
       <h3 className="text-slate-400 flex items-center">
         <FaCircle className="ml-2 text-sm" />
         از بهمن 1400 تا اردیبهشت 1402 - مدیاژ (کاوینو)
       </h3>
-      <div className="flex mt-4">
+      <div className="flex mt-4 flex-col md:flex-row">
         {expData.cards.map((el, index) => (
           <Card el={el} key={`card=${index}`} />
         ))}
@@ -125,7 +123,19 @@ const Experiences = () => {
 };
 
 Experiences.getLayout = function getLayout(page: React.ReactElement) {
-  return <Layout>{page}</Layout>;
+  return (
+    <Layout
+      props={{
+        title: "تجربه کاری",
+        description:
+          "شامل پروژه های شرکتی توسعه داده شده با react و nextjs و readux",
+        keywords:
+          "react, nextjs, typescript, scss, html, css, bootstrap, redux,react query, frontend, front end, web, web developer, frontend web developer, javascript",
+      }}
+    >
+      {page}
+    </Layout>
+  );
 };
 
 export default Experiences;

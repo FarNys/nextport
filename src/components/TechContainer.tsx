@@ -43,6 +43,18 @@ const TechContainer = () => {
       icon: <SiNextdotjs />,
     },
     {
+      title: "React Query",
+      icon: <RQIcon />,
+    },
+    {
+      title: "React Router",
+      icon: <SiReactrouter />,
+    },
+    {
+      title: "Redux, Redux Toolkit",
+      icon: <SiRedux />,
+    },
+    {
       title: "Material UI",
       icon: <SiMui />,
     },
@@ -57,18 +69,6 @@ const TechContainer = () => {
     {
       title: "Scss",
       icon: <BsFiletypeScss />,
-    },
-    {
-      title: "Redux, Redux Toolkit",
-      icon: <SiRedux />,
-    },
-    {
-      title: "React Router",
-      icon: <SiReactrouter />,
-    },
-    {
-      title: "React Query",
-      icon: <RQIcon />,
     },
   ];
   const otherLogos: ItemType[] = [
@@ -107,12 +107,12 @@ const TechContainer = () => {
   ];
 
   return (
-    <div className="flex w-full justify-center absolute bottom-0 flex-col">
-      <div className="flex flex-col items-center">
+    <div className="flex w-full justify-center flex-col px-6">
+      <div className="flex w-full flex-col items-center ">
         <h6 className="text-lg text-slate-400">مسلط به</h6>
         <TechWrapper list={logos} />
       </div>
-      <div className="flex flex-col items-center my-3">
+      <div className="flex w-full flex-col items-center my-3 flex-wrap">
         <h6 className="text-lg text-slate-400">آشنا به</h6>
         <TechWrapper list={otherLogos} />
       </div>

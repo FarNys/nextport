@@ -31,7 +31,7 @@ export const Button = forwardRef(
     return (
       <button
         ref={ref}
-        className={`rounded mx-1 ${sizeVariants[size]} ${
+        className={`rounded border mx-1 ${sizeVariants[size]} ${
           buttonVariants[variant]
         } ${className ? className : ""}`}
         {...rest}

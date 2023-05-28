@@ -5,7 +5,7 @@ import { CardType } from "@/types/types";
 
 const Card: React.FC<{ el: CardType }> = ({ el }) => {
   return (
-    <div className="flex-1 flex flex-col border-2 rounded-my mx-1 first:mr-0 bg-gradient-to-bl from-white to-primary-50 px-4 hover:to-primary-100">
+    <div className="flex-1 mt-2 flex flex-col border-2 rounded-my mx-1 first:mr-0 bg-gradient-to-bl from-white to-primary-50 px-4 hover:to-primary-100">
       <div className="flex justify-between my-2 items-center text-primary-700 text-lg">
         <h4>{el.title}</h4>
         <p>{el.icon}</p>

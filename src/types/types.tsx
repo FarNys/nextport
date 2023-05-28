@@ -1,5 +1,5 @@
 export interface CardType {
-  icon: JSX.Element;
+  icon?: JSX.Element;
   title: string;
   subTitle: string;
   desc: string;

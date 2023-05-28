@@ -13,6 +13,12 @@
 * {
   font-family: "Iran_Yekan";
 }
+/* div[dir:ltr] {
+  font-family: "Poppins", sans-serif;
+} */
+/* div[data-en="active"] * {
+  font-family: "Poppins", sans-serif;
+} */
 
 :root {
   --foreground-rgb: 0, 0, 0;
