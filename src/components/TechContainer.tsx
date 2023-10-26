@@ -46,10 +46,10 @@ const TechContainer = () => {
       title: "React Query",
       icon: <RQIcon />,
     },
-    {
-      title: "React Router",
-      icon: <SiReactrouter />,
-    },
+    // {
+    //   title: "React Router",
+    //   icon: <SiReactrouter />,
+    // },
     {
       title: "Redux, Redux Toolkit",
       icon: <SiRedux />,
@@ -84,22 +84,22 @@ const TechContainer = () => {
       title: "Cypress(Test Tool)",
       icon: <SiCypress />,
     },
-    {
-      title: "NodeJs",
-      icon: <SiNodedotjs />,
-    },
-    {
-      title: "ExpressJs",
-      icon: <SiExpress />,
-    },
-    {
-      title: "Postgresql",
-      icon: <SiPostgresql />,
-    },
-    {
-      title: "Prisma(ORM)",
-      icon: <SiPrisma />,
-    },
+    // {
+    //   title: "NodeJs",
+    //   icon: <SiNodedotjs />,
+    // },
+    // {
+    //   title: "ExpressJs",
+    //   icon: <SiExpress />,
+    // },
+    // {
+    //   title: "Postgresql",
+    //   icon: <SiPostgresql />,
+    // },
+    // {
+    //   title: "Prisma(ORM)",
+    //   icon: <SiPrisma />,
+    // },
     {
       title: "Socket IO",
       icon: <SiSocketdotio />,

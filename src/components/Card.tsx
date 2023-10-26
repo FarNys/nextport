@@ -5,18 +5,18 @@ import { CardType } from "@/types/types";
 
 const Card: React.FC<{ el: CardType }> = ({ el }) => {
   return (
-    <div className="flex-1 mt-2 flex flex-col border-2 rounded-my mx-1 first:mr-0 bg-gradient-to-bl from-white to-primary-50 px-4 hover:to-primary-100">
-      <div className="flex justify-between my-2 items-center text-primary-700 text-lg">
+    <div className="flex-1 mt-2 flex flex-col border border-slate-700 rounded-my mx-1 first:mr-0 bg-gradient-to-bl from-slate-900 to-slate-800 px-4 hover:to-slate-900">
+      <div className="flex justify-between my-2 items-center text-slate-400 text-lg">
         <h4>{el.title}</h4>
         <p>{el.icon}</p>
       </div>
-      <p>{el.desc}</p>
+      <p className="text-slate-200">{el.desc}</p>
       <div className="mt-3 h-full">
-        <h4 className="text-sm text-slate-500">{el.subTitle}</h4>
-        <ul className="flex flex-wrap mb-2">
+        <h4 className="text-sm text-slate-400">{el.subTitle}</h4>
+        <ul className="flex flex-wrap mb-2 mt-1">
           {el.tags.map((item, index) => (
             <li
-              className="rounded-my  text-sm w-max px-2 pt-1 pb-0.5 ml-1 mt-0.5 border border-slate-300  bg-white text-slate-600"
+              className="rounded-my  text-sm w-max px-2 pt-1 pb-0.5 ml-1 mt-0.5 border border-slate-700  bg-slate-900 text-slate-200"
               key={`tech-${index}`}
             >
               {item}

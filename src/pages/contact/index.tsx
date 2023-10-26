@@ -31,7 +31,7 @@ const acctouns: AccountType[] = [
 
 const Contact = () => {
   return (
-    <div className=" w-full p-3 mt-4 md:mt-20">
+    <div className=" w-full p-3 mt-4 md:mt-10">
       <h3 className="text-slate-400 flex items-center">
         <FaCircle className="ml-2 text-sm" />
         اکانت ها جهت ارتباط

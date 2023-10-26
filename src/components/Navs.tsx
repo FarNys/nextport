@@ -23,11 +23,11 @@ const Navs = () => {
     <nav className=" w-full max-w-7xl mx-auto flex justify-between ">
       <ul className="flex justify-center mt-3">
         {items.map((el, index) => (
-          <li key={`nav-${index}`}>
+          <li key={`nav-${index}`} className="mx-0.5">
             <Link
               href={el.link}
               className={`"mx-1 border border-transparent rounded-my px-2 py-1 text-slate-400 hover:bg-primary-500 hover:text-white hover:border-primary-500" ${
-                pathname === el.link ? "bg-primary-400 text-white" : ""
+                pathname === el.link ? "bg-primary-600 text-white" : ""
               }`}
             >
               {el.title}
